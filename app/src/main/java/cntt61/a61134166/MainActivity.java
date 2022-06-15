@@ -13,12 +13,12 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        final String arr[]={"Teo","Ty","Bin","Bo"};
-        ListView lv=(ListView) findViewById(R.id.lvperson);
-        ArrayAdapter<String>adapter=new ArrayAdapter<String>
+        final String arr[] = {"Teo", "Ty", "Bin", "Bo"};
+        ListView lv = (ListView) findViewById(R.id.lvperson);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>
                 (this, android.R.layout.simple_list_item_1, arr);
         lv.setAdapter(adapter);
-        final TextView txt=(TextView) findViewById(R.id.txtselection);
+        final TextView txt = (TextView) findViewById(R.id.txtselection);
         lv.setOnItemClickListener(
                 new AdapterView.OnItemClickListener() {
                     public void onItemClick(AdapterView<?> arg0,
@@ -26,7 +26,7 @@ public class MainActivity extends Activity {
                                             int arg2,
                                             long arg3) {
                         //đối số arg2 là vị trí phần tử trong Data Source (arr)
-                        txt.setText("position :"+arg2+" ; value ="+arr[arg2]);
+                        txt.setText("position :" + arg2 + " ; value =" + arr[arg2]);
                     }
                 });
     }
